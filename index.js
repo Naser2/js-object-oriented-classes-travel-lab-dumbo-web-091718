@@ -23,8 +23,8 @@ class Route{
     let eastWest = ['1st Avenue', '2nd Avenue', '3rd Avenue',
     'Lexington Avenue', 'Park', 'Madison Avenue', '5th Avenue']
     let distance = 0;
-    distance = distance + this.endingLocation["vertical"] - this.beginningLocation["vertical"];
-    distance = distance + Math.abs((eastWest.indexOf(this.beginningLocation["horizontal"]) + 1) - (eastWest.indexOf(this.endingLocation["horizontal"]) + 1));
+    distance += this.endingLocation["vertical"] - this.beginningLocation["vertical"];
+    distance += Math.abs((eastWest.indexOf(this.beginningLocation["horizontal"]) + 1) - (eastWest.indexOf(this.endingLocation["horizontal"]) + 1));
     return distance;
   }
 
